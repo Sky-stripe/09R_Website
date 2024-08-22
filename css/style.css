@@ -1,0 +1,844 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  border: 0;
+  padding: 0;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-color: black;
+}
+
+.Header {
+    padding: 0;
+    margin: 0;
+    position: relative; /* Make the Header the positioning context for the Navbar */
+}
+
+.HeadBG {
+    width: 100vw;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+    opacity: 55%;
+    z-index: -1; 
+    position: relative; 
+}
+
+.Navbar {
+    position: fixed; 
+    top: 20px; 
+    left: 0; 
+    right: 0;  /* Allows it to center */
+    z-index: 1; 
+    width: 900px; 
+    margin: 0 auto; /* Centers the Navbar horizontally */
+    display: flex; 
+    justify-content: center; 
+    list-style: none; 
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 30px;
+    border-radius: 20px;
+    background: rgba(4, 4, 4, 0.055);
+    border-radius: 16px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.158);
+}
+
+.Navbar li {
+    margin: 0 50px; 
+}
+
+.Navbar a {
+    color: white; 
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 17px;
+}
+
+.Navbar .NavbarCurrent {
+  color: #999999; 
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 17px;
+  cursor: default;
+}
+
+.Navbar .NavbarCurrent:hover {
+  color: #999999; 
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 17px;
+  cursor: default;
+}
+
+
+.Navbar a.Lastnav {
+    color: black;
+    background: rgb(163,53,255);
+    background: linear-gradient(90deg, rgba(163,53,255,1) 0%, rgba(189,118,249,1) 50%, rgba(144,11,255,1) 100%);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+.HeaderMain {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+
+
+.Wordlogo {
+    position: absolute;
+    top: 40vh;
+    width: 80%;
+    left: 50%; 
+    transform: translateX(-50%); 
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(0px 4px 4px #00000034);
+    
+}
+
+.HeaderButtons {
+    position: absolute;
+    top: 55vh;
+    left: 50%; 
+    transform: translateX(-50%); 
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+}
+
+.HeaderButtons a {
+    color: rgb(0, 0, 0); 
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 17px;
+    background: rgb(238, 216, 255);
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+
+}
+
+.HeaderButtons .hbone {
+    background: rgb(248,248,248);
+    background: linear-gradient(90deg, rgba(248,248,248,1) 0%, rgba(191,191,191,1) 50%, rgba(255,255,255,1) 100%);
+    padding-left: 77.24px;
+    padding-right: 77.24px;
+}
+
+.HeaderButtons .hbtwo {
+    background: rgb(163,53,255);
+    background: linear-gradient(90deg, rgba(163,53,255,1) 0%, rgba(189,118,249,1) 50%, rgba(144,11,255,1) 100%);
+}
+
+.item {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.item:nth-child(odd) {
+  background-color: #e0e0e0;
+}
+
+.item:nth-child(even) {
+  background-color: #494444;
+}
+
+.BentoGrid {
+  width: 1250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Bento {
+  position: absolute;
+  background-color: #0F0F0F;
+  width: 100%;
+  height: 1300px;
+  top: 100vh;
+}
+
+.BentoContainer {
+    position: absolute;
+    width: 1230px; 
+    height: 815px;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+
+
+.BentoGrid {
+  width: 1230px;
+  display: flex;
+}
+
+.row1 {
+  flex: 1;
+  display: flex;
+}
+
+.row2 {
+  flex: 1;
+  display: flex;
+  margin-top: 15px;
+}
+
+.BentoItem11 {
+  position: relative;
+  height: 400px;
+  width: 815px;
+  padding-right: 15px;
+  border-radius: 35px;
+  background: rgb(44,44,44);
+  background: linear-gradient(0deg, rgba(44,44,44,1) 0%, rgba(37,37,37,1) 100%);
+  box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+  -webkit-box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+  -moz-box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+  padding: 40px;
+}
+
+.BentoItem12 {
+  position: relative;
+  height: 400px;
+  width: 400px;
+  margin-left: 15px;
+  border-radius: 35px;
+  background: rgb(44,44,44);
+  background: linear-gradient(0deg, rgba(44,44,44,1) 0%, rgba(37,37,37,1) 100%);
+  box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+  -webkit-box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+  -moz-box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+  padding: 40px;
+}
+
+.BentoItem21 {
+  position: relative;
+  height: 400px;
+  width: 400px;
+  border-radius: 35px;
+  background: rgb(44,44,44);
+  background: linear-gradient(0deg, rgba(44,44,44,1) 0%, rgba(37,37,37,1) 100%);
+  box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+ -webkit-box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+ -moz-box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+ padding: 40px;
+}
+
+.BentoItem22 {
+  position: relative;
+  height: 400px;
+  width: 400px;
+  margin-left: 15px;
+  border-radius: 35px;
+  background: rgb(44,44,44);
+  background: linear-gradient(0deg, rgba(44,44,44,1) 0%, rgba(37,37,37,1) 100%);
+  box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+ -webkit-box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+ -moz-box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+ padding: 40px;
+}
+
+.BentoItem23 {
+  position: relative;
+  height: 400px;
+  width: 400px;
+  margin-left: 15px;
+  border-radius: 35px;
+  background: rgb(44,44,44);
+  background: linear-gradient(0deg, rgba(44,44,44,1) 0%, rgba(37,37,37,1) 100%);
+  box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+ -webkit-box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+ -moz-box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+ padding: 40px;
+}
+
+.bentoimage {
+  width: 72px;
+  height: auto;
+}
+
+.bentotitle {
+  color: white; 
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 27px;
+  padding-top: 5px;
+  padding-left: 20px;
+  cursor: default;
+}
+
+.bentotext {
+  height: 72px;
+  color: white; 
+  text-decoration: none;
+  font-weight: normal;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  cursor: default;
+}
+
+.bentoflex {
+  display: flex;
+}
+
+.logoend {
+  position: relative;
+  height: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 980px;
+  object-fit: cover;
+}
+
+.Footer {
+  position: relative;
+  width: 100%;
+  height: 330px;
+  top: 100px;
+  z-index: 5;
+  top: 840px;
+  background: rgba(15, 15, 15, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(100px);
+  border-top: 1px solid #535353;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center text within items */
+}
+
+.footertextone {
+  color: #767676; 
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 15px;
+  cursor: default;
+  padding-top: 40px;
+  
+}
+
+.footertexttwo {
+  color: #767676; 
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 11px;
+  cursor: default;
+  padding-top: 50px;
+  width: 815px;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+.Navbar a:hover {
+  color: #a234ff;
+  transition: color 0.2s ease-in-out;
+}
+
+.Navbar a.Lastnav:hover {
+    background: rgb(85,29,132);
+    background: linear-gradient(90deg, rgba(85,29,132,1) 0%, rgba(96,65,122,1) 50%, rgba(85,29,132,1) 100%);
+    color: rgb(227, 184, 255);
+  transition: color 0.2s ease-in-out;
+}
+
+.HeaderButtons .hbtwo:hover {
+  background: rgb(85,29,132);
+  background: linear-gradient(90deg, rgba(85,29,132,1) 0%, rgba(96,65,122,1) 50%, rgba(85,29,132,1) 100%);
+  color: rgb(227, 184, 255);
+transition: color 0.2s ease-in-out;
+}
+
+.HeaderButtons .hbone:hover {
+  background: rgb(177,177,177);
+  background: linear-gradient(90deg, rgba(177,177,177,1) 0%, rgba(120,120,120,1) 50%, rgba(177,177,177,1) 100%);
+  color: rgb(255, 255, 255);
+transition: color 0.2s ease-in-out;
+}
+
+
+/* RESPONSIVE MOBILE ELEMENTS */
+.HeaderButtonsMobile {
+  position: absolute;
+  top: 55vh;
+  left: 50%; 
+  transform: translateX(-50%); 
+  display: flex;
+  justify-content: center; 
+  gap: 20px; 
+  visibility: collapse;
+}
+
+
+.HeaderButtonsMobile a {
+  color: rgb(0, 0, 0); 
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 17px;
+  background: rgb(238, 216, 255);
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+
+}
+
+.HeaderButtonsMobile .hbone {
+  background: rgb(248,248,248);
+  background: linear-gradient(90deg, rgba(248,248,248,1) 0%, rgba(191,191,191,1) 50%, rgba(255,255,255,1) 100%);
+  padding-left: 77.24px;
+  padding-right: 77.24px;
+}
+
+.HeaderButtonsMobile .hbone:hover {
+  background: rgb(177,177,177);
+  background: linear-gradient(90deg, rgba(177,177,177,1) 0%, rgba(120,120,120,1) 50%, rgba(177,177,177,1) 100%);
+  color: rgb(255, 255, 255);
+transition: color 0.2s ease-in-out;
+}
+
+.BentoContainerMobile {
+  visibility: collapse;
+}
+
+
+.BentoContainerMobile {
+  position: absolute;
+  width: 509.2024px; 
+  height: 815px;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.BentoGridMobile {
+  width: 509.2024px;
+  display: flex;
+  flex-direction: column;
+}
+
+.BentoItem11Mobile {
+  position: relative;
+  height: 245.3988px;
+  width: 505px;
+  padding-right: 15px;
+  border-radius: 35px;
+  background: rgb(44,44,44);
+  background: linear-gradient(0deg, rgba(44,44,44,1) 0%, rgba(37,37,37,1) 100%);
+  box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+  -webkit-box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+  -moz-box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+  padding: 40px;
+}
+
+
+.BentoItem21Mobile {
+  position: relative;
+  height: 245.3988px;
+  width: 245.3988px;
+  border-radius: 35px;
+  background: rgb(44,44,44);
+  background: linear-gradient(0deg, rgba(44,44,44,1) 0%, rgba(37,37,37,1) 100%);
+  box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+ -webkit-box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+ -moz-box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+ padding: 40px;
+}
+
+
+.BentoItem22Mobile {
+  position: relative;
+  height: 245.3988px;
+  width: 245.3988px;
+  border-radius: 35px;
+  background: rgb(44,44,44);
+  background: linear-gradient(0deg, rgba(44,44,44,1) 0%, rgba(37,37,37,1) 100%);
+  box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+ -webkit-box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+ -moz-box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+ padding: 40px;
+ margin-left: 15px;
+}
+
+.BentoItem31Mobile {
+  position: relative;
+  height: 245.3988px;
+  width: 245.3988px;
+  border-radius: 35px;
+  background: rgb(44,44,44);
+  background: linear-gradient(0deg, rgba(44,44,44,1) 0%, rgba(37,37,37,1) 100%);
+  box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+ -webkit-box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+ -moz-box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+ padding: 40px;
+}
+
+.BentoItem32Mobile {
+  position: relative;
+  height: 245.3988px;
+  width: 245.3988px;
+  margin-left: 15px;
+  border-radius: 35px;
+  background: rgb(44,44,44);
+  background: linear-gradient(0deg, rgba(44,44,44,1) 0%, rgba(37,37,37,1) 100%);
+  box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+ -webkit-box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+ -moz-box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+ padding: 40px;
+}
+
+.bentoimageMobile {
+  width: 40.1718px;
+  height: 40.1718px;
+}
+
+.bentotitleMobile {
+  color: white; 
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 14px;
+  padding-top: 5px;
+  padding-left: 20px;
+  cursor: default;
+}
+
+.bentotextMobile {
+  height: 72px;
+  color: white; 
+  text-decoration: none;
+  font-weight: normal;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 13px;
+  cursor: default;
+}
+
+.row3 {
+  flex: 1;
+  display: flex;
+  margin-top: 15px;
+}
+
+
+/* RESPONSIVE BACKGROUND */
+
+@media (max-aspect-ratio: 1.828) {
+  .HeadBG {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    margin: 0;
+    padding: 0;
+    opacity: 55%;
+    z-index: -1; 
+    position: relative;
+    object-fit: cover;
+}
+}
+
+/* RESPONSIVE HEADER BUTTONS */
+
+@media (max-width: 1280px) {
+  .HeaderButtons {
+    visibility: collapse;
+  }
+
+  .HeaderButtonsMobile {
+    visibility: visible;
+  }
+
+}
+
+/* RESPONSIVE BENTO */
+
+@media (max-width: 1280px) {
+
+  .BentoContainer {
+    position: absolute;
+    width: 754.6012px; 
+    height: 815px;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .BentoGrid {
+    width: 754.6012px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .BentoItem11 {
+    position: relative;
+    height: 245.3988px;
+    width: 500px;
+    padding-right: 15px;
+    border-radius: 35px;
+    background: rgb(44,44,44);
+    background: linear-gradient(0deg, rgba(44,44,44,1) 0%, rgba(37,37,37,1) 100%);
+    box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+    -webkit-box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+    -moz-box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+    padding: 40px;
+  }
+
+
+  .BentoItem12 {
+    position: relative;
+    height: 245.3988px;
+    width: 245.3988px;
+    border-radius: 35px;
+    background: rgb(44,44,44);
+    background: linear-gradient(0deg, rgba(44,44,44,1) 0%, rgba(37,37,37,1) 100%);
+    box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+   -webkit-box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+   -moz-box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+   padding: 40px;
+  }
+  
+
+  .BentoItem21 {
+    position: relative;
+    height: 245.3988px;
+    width: 245.3988px;
+    border-radius: 35px;
+    background: rgb(44,44,44);
+    background: linear-gradient(0deg, rgba(44,44,44,1) 0%, rgba(37,37,37,1) 100%);
+    box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+   -webkit-box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+   -moz-box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+   padding: 40px;
+  }
+  
+  .BentoItem22 {
+    position: relative;
+    height: 245.3988px;
+    width: 245.3988px;
+    margin-left: 15px;
+    border-radius: 35px;
+    background: rgb(44,44,44);
+    background: linear-gradient(0deg, rgba(44,44,44,1) 0%, rgba(37,37,37,1) 100%);
+    box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+   -webkit-box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+   -moz-box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+   padding: 40px;
+  }
+  
+  .BentoItem23 {
+    position: relative;
+    height: 245.3988px;
+    width: 245.3988px;
+    margin-left: 15px;
+    border-radius: 35px;
+    background: rgb(44,44,44);
+    background: linear-gradient(0deg, rgba(44,44,44,1) 0%, rgba(37,37,37,1) 100%);
+    box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+   -webkit-box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+   -moz-box-shadow: 1px 14px 24px 0px rgba(0,0,0,0.24);
+   padding: 40px;
+  }
+
+  .bentoimage {
+    width: 40.1718px;
+    height: 40.1718px;
+  }
+  
+  .bentotitle {
+    color: white; 
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 14px;
+    padding-top: 5px;
+    padding-left: 20px;
+    cursor: default;
+  }
+  
+  .bentotext {
+    height: 72px;
+    color: white; 
+    text-decoration: none;
+    font-weight: normal;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 13px;
+    cursor: default;
+  }
+}
+
+@media (max-width: 795px) {
+  .BentoContainer {
+    visibility: collapse;
+  }
+
+  .BentoContainerMobile {
+    visibility: visible;
+  }
+
+
+}
+
+@media (max-aspect-ratio: 9/16) {
+  .BentoContainer {
+    visibility: collapse;
+  }
+
+  .BentoContainerMobile {
+    visibility: visible;
+  }
+
+
+}
+
+/* RESPONSIVE FOOTER */
+
+@media (max-width: 920px) {
+  .footertexttwo {
+    width: 80vw;
+  }
+
+
+}
+
+
+/* RESPONSIVE NAVBAR */
